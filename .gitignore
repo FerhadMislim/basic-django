@@ -1,0 +1,28 @@
+# Django related files
+*.pyc
+__pycache__/
+*.sqlite3
+*.pyo
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+*.pyc
+*.pyo
+*.swp
+
+# Development/IDE files
+*.env
+*.env.*
+.vscode/
+.idea/
+*.pydevproject
+*.pydevworkspace
+
+# Other generated files
+/staticfiles/
+/media/
+
+# Secret keys and sensitive information
+.env
+settings_secret.py
