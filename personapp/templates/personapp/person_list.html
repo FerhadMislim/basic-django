@@ -1,7 +1,23 @@
-<h1>Person List</h1>
-<ul>
-  {% for person in persons %}
-  <li>{{ person.name }}, {{ person.age }}</li>
-  {% endfor %}
-</ul>
-<a href="{% url 'add_person' %}">Add Person</a>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for person in persons %}
+    <tr>
+      <td>{{ person.name }}</td>
+      <td>{{ person.age }}</td>
+      <td>
+        <form action="{% url 'delete_person' person.id %}" method="post">
+          {% csrf_token %}
+          <button type="submit">Delete</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
