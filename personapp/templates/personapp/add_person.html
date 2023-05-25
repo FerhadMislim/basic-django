@@ -1,9 +1,21 @@
-<h1>Add Person</h1>
-<form method="post" action="{% url 'add_person' %}">
-  {% csrf_token %}
-  <label for="name">Name:</label>
-  <input type="text" name="name" id="name" required /><br />
-  <label for="age">Age:</label>
-  <input type="number" name="age" id="age" required /><br />
-  <input type="submit" value="Submit" />
-</form>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+    <title>Add Person</title>
+  </head>
+  <body>
+    <h1>Add Person</h1>
+    <form method="post" action="{% url 'add_person' %}">
+      {% csrf_token %}
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" required /><br />
+      <label for="age">Age:</label>
+      <input type="number" name="age" id="age" required /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
